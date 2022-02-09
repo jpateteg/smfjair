@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: redis-cluster
+  namespace: casa
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: redis-cluster
+  source: casa-operators
+  sourceNamespace: openshift-marketplace

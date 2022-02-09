@@ -1,0 +1,23 @@
+apiVersion: axyom.casa.io/v1alpha2
+kind: AxyomSMF
+metadata:
+  name: smf1
+spec:
+  imagePullPolicy: IfNotPresent
+  images:
+    n4: 228078468156.dkr.ecr.us-east-2.amazonaws.com/5gc/smf/pfcp:v1.2.14
+    smfsm: 228078468156.dkr.ecr.us-east-2.amazonaws.com/5gc/smf/sm:v1.2.42
+    upfmgr: 228078468156.dkr.ecr.us-east-2.amazonaws.com/5gc/smf/upfmgr:v1.2.23
+    #cms: 228078468156.dkr.ecr.us-east-2.amazonaws.com/5gc/smf/cms:5.2.0
+    nrf-agent: 228078468156.dkr.ecr.us-east-2.amazonaws.com/5gc/common/nrf-agent:5.2.0
+    axyom-sidecar: 228078468156.dkr.ecr.us-east-2.amazonaws.com/5gc/platform/axyom-sidecar:5.2.0
+  sbi:
+    type: LoadBalancer
+#    externalIPs: ["11.11.14.3"]
+#  n4:
+#    externalIPs: ["11.11.14.4"]
+#  upfMgr:
+#    externalIPs: ["11.11.14.5"]
+#  gtpu:
+#    externalIPs: ["11.11.14.8"]
+
